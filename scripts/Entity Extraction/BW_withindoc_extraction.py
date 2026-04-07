@@ -1,5 +1,5 @@
 """
-BW: Within-Document Structured Extraction
+BRADY: Within-Document Structured Extraction
 """
 
 import json
