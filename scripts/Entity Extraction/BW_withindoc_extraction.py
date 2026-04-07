@@ -523,7 +523,7 @@ def extract_thread(client: anthropic.Anthropic, thread: dict) -> dict:
 def main():
     print("\n=== EpsTracked — Pass 2: Within-Document Extraction ===\n")
 
-    client = anthropic.Anthropic(api_key="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")
+    client = anthropic.Anthropic(api_key="sk-xx")
     conn   = init_database(DB_PATH)
 
     # ── Load JSONL and index by thread_id ─────────────────────────────────
