@@ -27,14 +27,14 @@ export default function StatCard({
     >
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-medium uppercase tracking-wider mb-2" style={{ color: "#8888a0" }}>
+          <p className="text-xs font-medium uppercase tracking-wider mb-2" style={{ color: "#9999b5" }}>
             {label}
           </p>
           <p className="text-2xl font-bold" style={{ color: accentColor }}>
-            {value}
+            {typeof value === "number" ? value.toLocaleString() : value}
           </p>
           {subtitle && (
-            <p className="text-xs mt-1" style={{ color: "#8888a0" }}>
+            <p className="text-xs mt-1" style={{ color: "#9999b5" }}>
               {subtitle}
             </p>
           )}

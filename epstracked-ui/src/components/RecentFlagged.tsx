@@ -45,7 +45,7 @@ export default function RecentFlagged({ events }: RecentFlaggedProps) {
                     {event.actor} → {event.recipient}
                   </span>
                 </div>
-                <p className="text-xs truncate" style={{ color: "#8888a0" }}>
+                <p className="text-xs truncate" style={{ color: "#9999b5" }}>
                   {event.eventDescription.substring(0, 100)}...
                 </p>
               </div>

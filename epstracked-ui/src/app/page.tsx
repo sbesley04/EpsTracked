@@ -62,19 +62,19 @@ export default function DashboardPage() {
     .map(([year, data]) => ({ year, ...data }));
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       {/* Header */}
-      <div className="mb-8">
+      <div className="mb-6 md:mb-8">
         <h1 className="text-2xl font-bold" style={{ color: "#e4e4ef" }}>
           Dashboard
         </h1>
-        <p className="text-sm mt-1" style={{ color: "#8888a0" }}>
+        <p className="text-sm mt-1" style={{ color: "#9999b5" }}>
           Overview of extracted events, entities, and trafficking indicators
         </p>
       </div>
 
       {/* Stat Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 mb-6 md:mb-8">
         <StatCard
           label="Total Events"
           value={summary.totalEvents}
@@ -123,7 +123,7 @@ export default function DashboardPage() {
       />
 
       {/* Bottom panels */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-4 md:mt-6">
         <RecentFlagged events={flagged.slice(0, 8)} />
         <TopEntities entities={entities.slice(0, 8)} />
       </div>

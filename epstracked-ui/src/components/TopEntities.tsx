@@ -37,7 +37,7 @@ export default function TopEntities({ entities }: TopEntitiesProps) {
               <p className="text-sm font-medium truncate" style={{ color: "#e4e4ef" }}>
                 {entity.name}
               </p>
-              <p className="text-xs mt-0.5" style={{ color: "#8888a0" }}>
+              <p className="text-xs mt-0.5" style={{ color: "#9999b5" }}>
                 {entity.totalEvents} events · {entity.connectionCount} connections
               </p>
             </div>

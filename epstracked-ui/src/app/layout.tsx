@@ -1,11 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
   title: "EpsTracked — Document Analysis Dashboard",
   description:
     "Interactive dashboard for exploring extracted events, entities, and trafficking indicators from the Epstein document corpus.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -15,9 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex" style={{ background: "#0a0a0f", color: "#e4e4ef", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+      <body
+        className="min-h-full flex"
+        style={{
+          background: "#0a0a0f",
+          color: "#e4e4ef",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        }}
+      >
         <Sidebar />
-        <main className="flex-1 ml-64 min-h-screen">
+        <MobileNav />
+        <main className="flex-1 md:ml-64 min-h-screen pb-20 md:pb-0">
           {children}
         </main>
       </body>

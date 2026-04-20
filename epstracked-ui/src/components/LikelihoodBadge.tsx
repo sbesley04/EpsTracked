@@ -35,7 +35,7 @@ export default function LikelihoodBadge({ value, showBar = false }: LikelihoodBa
           />
         </div>
       )}
-      <span className="text-xs hidden sm:inline" style={{ color: "#8888a0" }}>
+      <span className="text-xs hidden sm:inline" style={{ color: "#9999b5" }}>
         {label}
       </span>
     </div>

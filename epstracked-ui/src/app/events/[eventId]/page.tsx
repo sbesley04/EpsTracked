@@ -24,12 +24,12 @@ export default async function EventDetailPage({ params }: Props) {
   const CARD = { background: "#1a1a2e", borderColor: "#2a2a3e" };
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-4 md:p-8 max-w-5xl">
       {/* Back link */}
       <Link
         href="/events"
         className="inline-flex items-center gap-1.5 text-sm mb-6 transition-colors"
-        style={{ color: "#8888a0" }}
+        style={{ color: "#9999b5" }}
       >
         <ArrowLeft size={16} /> Back to Events
       </Link>
@@ -50,10 +50,10 @@ export default async function EventDetailPage({ params }: Props) {
           </div>
           <div className="flex items-center gap-3 flex-wrap">
             <EventTypeBadge type={event.eventType} />
-            <span className="text-xs" style={{ color: "#8888a0" }}>
+            <span className="text-xs" style={{ color: "#9999b5" }}>
               Layer {event.layer}
             </span>
-            <span className="text-xs" style={{ color: "#8888a0" }}>
+            <span className="text-xs" style={{ color: "#9999b5" }}>
               {event.eventId}
             </span>
           </div>
@@ -96,7 +96,7 @@ export default async function EventDetailPage({ params }: Props) {
             </h2>
             <div className="grid grid-cols-3 gap-4 mb-4">
               <div>
-                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#8888a0" }}>
+                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#9999b5" }}>
                   Likelihood
                 </p>
                 <p className="text-lg font-bold" style={{ color: event.traffickingLikelihood >= 0.7 ? "#ef4444" : event.traffickingLikelihood >= 0.4 ? "#f59e0b" : "#3b82f6" }}>
@@ -104,7 +104,7 @@ export default async function EventDetailPage({ params }: Props) {
                 </p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#8888a0" }}>
+                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#9999b5" }}>
                   Confidence
                 </p>
                 <p className="text-lg font-bold" style={{ color: "#8b5cf6" }}>
@@ -112,7 +112,7 @@ export default async function EventDetailPage({ params }: Props) {
                 </p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#8888a0" }}>
+                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#9999b5" }}>
                   Thread Prior
                 </p>
                 <p className="text-lg font-bold" style={{ color: "#06b6d4" }}>
@@ -123,7 +123,7 @@ export default async function EventDetailPage({ params }: Props) {
 
             {indicators.length > 0 && (
               <div className="mb-4">
-                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: "#8888a0" }}>
+                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: "#9999b5" }}>
                   Indicators
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -142,7 +142,7 @@ export default async function EventDetailPage({ params }: Props) {
 
             {event.flagReasoning && (
               <div>
-                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: "#8888a0" }}>
+                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: "#9999b5" }}>
                   Reasoning
                 </p>
                 <p className="text-xs leading-relaxed" style={{ color: "#c4c4d4" }}>
@@ -163,12 +163,12 @@ export default async function EventDetailPage({ params }: Props) {
             <div className="space-y-3">
               {event.dateNormalized && (
                 <div className="flex items-start gap-2">
-                  <Calendar size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#8888a0" }} />
+                  <Calendar size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#9999b5" }} />
                   <div>
-                    <p className="text-xs" style={{ color: "#8888a0" }}>Date</p>
+                    <p className="text-xs" style={{ color: "#9999b5" }}>Date</p>
                     <p className="text-sm" style={{ color: "#e4e4ef" }}>
                       {event.dateNormalized}
-                      <span className="text-xs ml-1" style={{ color: "#8888a0" }}>
+                      <span className="text-xs ml-1" style={{ color: "#9999b5" }}>
                         ({event.dateConfidence})
                       </span>
                     </p>
@@ -177,12 +177,12 @@ export default async function EventDetailPage({ params }: Props) {
               )}
               {event.locationNormalized && (
                 <div className="flex items-start gap-2">
-                  <MapPin size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#8888a0" }} />
+                  <MapPin size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#9999b5" }} />
                   <div>
-                    <p className="text-xs" style={{ color: "#8888a0" }}>Location</p>
+                    <p className="text-xs" style={{ color: "#9999b5" }}>Location</p>
                     <p className="text-sm" style={{ color: "#e4e4ef" }}>
                       {event.locationNormalized}
-                      <span className="text-xs ml-1" style={{ color: "#8888a0" }}>
+                      <span className="text-xs ml-1" style={{ color: "#9999b5" }}>
                         ({event.locationConfidence})
                       </span>
                     </p>
@@ -190,13 +190,13 @@ export default async function EventDetailPage({ params }: Props) {
                 </div>
               )}
               <div className="flex items-start gap-2">
-                <FileText size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#8888a0" }} />
+                <FileText size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#9999b5" }} />
                 <div>
-                  <p className="text-xs" style={{ color: "#8888a0" }}>Thread</p>
+                  <p className="text-xs" style={{ color: "#9999b5" }}>Thread</p>
                   <p className="text-sm" style={{ color: "#e4e4ef" }}>
                     {event.subject || "No subject"}
                   </p>
-                  <p className="text-xs mt-0.5 font-mono" style={{ color: "#8888a0" }}>
+                  <p className="text-xs mt-0.5 font-mono" style={{ color: "#9999b5" }}>
                     {event.threadId.substring(0, 30)}...
                   </p>
                 </div>
@@ -249,7 +249,7 @@ export default async function EventDetailPage({ params }: Props) {
                         {te.actor} → {te.recipient}
                       </span>
                     </div>
-                    <p className="text-xs truncate mt-0.5" style={{ color: "#8888a0" }}>
+                    <p className="text-xs truncate mt-0.5" style={{ color: "#9999b5" }}>
                       {te.eventDescription.substring(0, 80)}...
                     </p>
                   </Link>

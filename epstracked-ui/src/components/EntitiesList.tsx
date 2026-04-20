@@ -53,7 +53,7 @@ export default function EntitiesList({ entities }: EntitiesListProps) {
           className="flex items-center gap-2 px-3 py-2 rounded-lg border flex-1 min-w-[200px]"
           style={{ background: "#1a1a2e", borderColor: "#2a2a3e" }}
         >
-          <Search size={16} style={{ color: "#8888a0" }} />
+          <Search size={16} style={{ color: "#9999b5" }} />
           <input
             type="text"
             placeholder="Search entities..."
@@ -72,7 +72,7 @@ export default function EntitiesList({ entities }: EntitiesListProps) {
               style={{
                 background: sortField === field ? "rgba(99, 102, 241, 0.12)" : "#1a1a2e",
                 borderColor: sortField === field ? "rgba(99, 102, 241, 0.3)" : "#2a2a3e",
-                color: sortField === field ? "#a5b4fc" : "#8888a0",
+                color: sortField === field ? "#a5b4fc" : "#9999b5",
               }}
             >
               {field === "totalEvents" ? "Events" : field === "avgTraffickingLikelihood" ? "Risk" : field === "flaggedEvents" ? "Flagged" : "Connections"}
@@ -95,7 +95,7 @@ export default function EntitiesList({ entities }: EntitiesListProps) {
                 <h3 className="text-sm font-semibold" style={{ color: "#e4e4ef" }}>
                   {entity.name}
                 </h3>
-                <p className="text-xs mt-0.5 font-mono" style={{ color: "#8888a0" }}>
+                <p className="text-xs mt-0.5 font-mono" style={{ color: "#9999b5" }}>
                   {entity.id}
                 </p>
               </div>
@@ -105,19 +105,19 @@ export default function EntitiesList({ entities }: EntitiesListProps) {
             {/* Stats row */}
             <div className="grid grid-cols-4 gap-2 mb-3">
               <div>
-                <p className="text-xs" style={{ color: "#8888a0" }}>Events</p>
+                <p className="text-xs" style={{ color: "#9999b5" }}>Events</p>
                 <p className="text-sm font-bold" style={{ color: "#6366f1" }}>{entity.totalEvents}</p>
               </div>
               <div>
-                <p className="text-xs" style={{ color: "#8888a0" }}>Flagged</p>
-                <p className="text-sm font-bold" style={{ color: entity.flaggedEvents > 0 ? "#ef4444" : "#8888a0" }}>{entity.flaggedEvents}</p>
+                <p className="text-xs" style={{ color: "#9999b5" }}>Flagged</p>
+                <p className="text-sm font-bold" style={{ color: entity.flaggedEvents > 0 ? "#ef4444" : "#9999b5" }}>{entity.flaggedEvents}</p>
               </div>
               <div>
-                <p className="text-xs" style={{ color: "#8888a0" }}>As Actor</p>
+                <p className="text-xs" style={{ color: "#9999b5" }}>As Actor</p>
                 <p className="text-sm font-bold" style={{ color: "#10b981" }}>{entity.asActor}</p>
               </div>
               <div>
-                <p className="text-xs" style={{ color: "#8888a0" }}>Links</p>
+                <p className="text-xs" style={{ color: "#9999b5" }}>Links</p>
                 <p className="text-sm font-bold" style={{ color: "#8b5cf6" }}>{entity.connectionCount}</p>
               </div>
             </div>

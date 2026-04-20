@@ -39,7 +39,7 @@ export default function ThreadsList({ threads }: ThreadsListProps) {
         className="flex items-center gap-2 px-3 py-2 rounded-lg border mb-4 max-w-md"
         style={{ background: "#1a1a2e", borderColor: "#2a2a3e" }}
       >
-        <Search size={16} style={{ color: "#8888a0" }} />
+        <Search size={16} style={{ color: "#9999b5" }} />
         <input
           type="text"
           placeholder="Search threads..."
@@ -65,7 +65,7 @@ export default function ThreadsList({ threads }: ThreadsListProps) {
                     {thread.subject || "No subject"}
                   </h3>
                 </div>
-                <p className="text-xs font-mono mb-2 truncate" style={{ color: "#8888a0" }}>
+                <p className="text-xs font-mono mb-2 truncate" style={{ color: "#9999b5" }}>
                   {thread.threadId}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-2">
@@ -79,7 +79,7 @@ export default function ThreadsList({ threads }: ThreadsListProps) {
                     </span>
                   ))}
                   {thread.entityCount > 5 && (
-                    <span className="text-xs" style={{ color: "#8888a0" }}>
+                    <span className="text-xs" style={{ color: "#9999b5" }}>
                       +{thread.entityCount - 5} more
                     </span>
                   )}
@@ -87,7 +87,7 @@ export default function ThreadsList({ threads }: ThreadsListProps) {
               </div>
               <div className="flex flex-col items-end gap-2 flex-shrink-0">
                 <LikelihoodBadge value={thread.maxLikelihood} />
-                <div className="flex gap-3 text-xs" style={{ color: "#8888a0" }}>
+                <div className="flex gap-3 text-xs" style={{ color: "#9999b5" }}>
                   <span>{thread.eventCount} events</span>
                   {thread.flaggedCount > 0 && (
                     <span style={{ color: "#fca5a5" }}>

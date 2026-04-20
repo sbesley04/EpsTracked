@@ -7,12 +7,16 @@
   --color-bg-card-hover: #1e1e35;
   --color-border-main: #2a2a3e;
   --color-text-primary: #e4e4ef;
-  --color-text-secondary: #8888a0;
+  --color-text-secondary: #9999b5;
   --color-accent: #6366f1;
   --color-accent-glow: rgba(99, 102, 241, 0.15);
   --color-danger: #ef4444;
   --color-warning: #f59e0b;
   --color-success: #10b981;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 * {

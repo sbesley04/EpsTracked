@@ -26,11 +26,11 @@ export default async function EntityDetailPage({ params }: Props) {
   const CARD = { background: "#1a1a2e", borderColor: "#2a2a3e" };
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-4 md:p-8 max-w-5xl">
       <Link
         href="/entities"
         className="inline-flex items-center gap-1.5 text-sm mb-6 transition-colors"
-        style={{ color: "#8888a0" }}
+        style={{ color: "#9999b5" }}
       >
         <ArrowLeft size={16} /> Back to Entities
       </Link>
@@ -40,7 +40,7 @@ export default async function EntityDetailPage({ params }: Props) {
         <h1 className="text-2xl font-bold" style={{ color: "#e4e4ef" }}>
           {entity.name}
         </h1>
-        <p className="text-sm font-mono mt-1" style={{ color: "#8888a0" }}>
+        <p className="text-sm font-mono mt-1" style={{ color: "#9999b5" }}>
           {entity.id}
         </p>
       </div>
@@ -48,23 +48,23 @@ export default async function EntityDetailPage({ params }: Props) {
       {/* Stat cards */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
         <div className="rounded-xl border p-4" style={CARD}>
-          <p className="text-xs uppercase tracking-wider" style={{ color: "#8888a0" }}>Total Events</p>
+          <p className="text-xs uppercase tracking-wider" style={{ color: "#9999b5" }}>Total Events</p>
           <p className="text-xl font-bold mt-1" style={{ color: "#6366f1" }}>{entity.totalEvents}</p>
         </div>
         <div className="rounded-xl border p-4" style={CARD}>
-          <p className="text-xs uppercase tracking-wider" style={{ color: "#8888a0" }}>Flagged</p>
+          <p className="text-xs uppercase tracking-wider" style={{ color: "#9999b5" }}>Flagged</p>
           <p className="text-xl font-bold mt-1" style={{ color: "#ef4444" }}>{entity.flaggedEvents}</p>
         </div>
         <div className="rounded-xl border p-4" style={CARD}>
-          <p className="text-xs uppercase tracking-wider" style={{ color: "#8888a0" }}>As Actor</p>
+          <p className="text-xs uppercase tracking-wider" style={{ color: "#9999b5" }}>As Actor</p>
           <p className="text-xl font-bold mt-1" style={{ color: "#10b981" }}>{entity.asActor}</p>
         </div>
         <div className="rounded-xl border p-4" style={CARD}>
-          <p className="text-xs uppercase tracking-wider" style={{ color: "#8888a0" }}>As Recipient</p>
+          <p className="text-xs uppercase tracking-wider" style={{ color: "#9999b5" }}>As Recipient</p>
           <p className="text-xl font-bold mt-1" style={{ color: "#f59e0b" }}>{entity.asRecipient}</p>
         </div>
         <div className="rounded-xl border p-4" style={CARD}>
-          <p className="text-xs uppercase tracking-wider" style={{ color: "#8888a0" }}>Avg Risk</p>
+          <p className="text-xs uppercase tracking-wider" style={{ color: "#9999b5" }}>Avg Risk</p>
           <p className="text-xl font-bold mt-1" style={{ color: entity.avgTraffickingLikelihood >= 0.5 ? "#ef4444" : "#f59e0b" }}>
             {(entity.avgTraffickingLikelihood * 100).toFixed(0)}%
           </p>
@@ -99,7 +99,7 @@ export default async function EntityDetailPage({ params }: Props) {
                         </span>
                         <EventTypeBadge type={event.eventType} />
                       </div>
-                      <p className="text-xs truncate" style={{ color: "#8888a0" }}>
+                      <p className="text-xs truncate" style={{ color: "#9999b5" }}>
                         {event.eventDescription.substring(0, 120)}...
                       </p>
                     </div>
@@ -134,7 +134,7 @@ export default async function EntityDetailPage({ params }: Props) {
                         <p className="text-sm font-medium" style={{ color: "#e4e4ef" }}>
                           {otherName}
                         </p>
-                        <p className="text-xs" style={{ color: "#8888a0" }}>
+                        <p className="text-xs" style={{ color: "#9999b5" }}>
                           {conn.count} interactions
                           {conn.flaggedCount > 0 && (
                             <span style={{ color: "#fca5a5" }}> · {conn.flaggedCount} flagged</span>

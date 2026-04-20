@@ -46,13 +46,13 @@ export default function ThreadsPage() {
   threads.sort((a, b) => b.maxLikelihood - a.maxLikelihood);
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <div className="mb-6">
         <h1 className="text-2xl font-bold" style={{ color: "#e4e4ef" }}>
           Threads
         </h1>
-        <p className="text-sm mt-1" style={{ color: "#8888a0" }}>
-          {threads.length} source document threads
+        <p className="text-sm mt-1" style={{ color: "#9999b5" }}>
+          {threads.length.toLocaleString()} source document threads
         </p>
       </div>
       <ThreadsList threads={threads} />

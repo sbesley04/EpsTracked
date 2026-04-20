@@ -58,6 +58,30 @@ export function getEntityName(entityId: string): string {
   return entity?.name ?? entityId;
 }
 
+/**
+ * Timeline of events by year where the given entity is the primary actor.
+ * For "narrative" views focused on a specific actor.
+ */
+export function getEntityTimeline(entityId: string): {
+  year: string;
+  total: number;
+  flagged: number;
+}[] {
+  const events = getEventsByEntity(entityId);
+  const map: Record<string, { total: number; flagged: number }> = {};
+  events.forEach((e) => {
+    if (!e.dateNormalized) return;
+    const year = e.dateNormalized.substring(0, 4);
+    if (!/^\d{4}$/.test(year)) return;
+    if (!map[year]) map[year] = { total: 0, flagged: 0 };
+    map[year].total++;
+    if (e.traffickingFlag) map[year].flagged++;
+  });
+  return Object.entries(map)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([year, v]) => ({ year, ...v }));
+}
+
 export function getLikelihoodLevel(likelihood: number): {
   label: string;
   color: string;
