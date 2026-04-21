@@ -28,7 +28,11 @@ export default function MobileNav() {
       {/* Mobile top bar — logo only */}
       <header
         className="md:hidden fixed top-0 left-0 right-0 z-40 px-4 py-3 border-b flex items-center"
-        style={{ background: "#12121a", borderColor: "#2a2a3e" }}
+        style={{
+          background: "#12121a",
+          borderColor: "#2a2a3e",
+          paddingTop: "calc(env(safe-area-inset-top, 0px) + 0.75rem)",
+        }}
       >
         <Link href="/" className="flex items-center gap-2">
           <div
@@ -44,9 +48,6 @@ export default function MobileNav() {
           </div>
         </Link>
       </header>
-
-      {/* Spacer for top bar */}
-      <div className="md:hidden h-14" />
 
       {/* Bottom tab bar */}
       <nav

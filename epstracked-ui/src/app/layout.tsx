@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <Sidebar />
         <MobileNav />
-        <main className="flex-1 md:ml-64 min-h-screen pb-20 md:pb-0">
+        <main className="flex-1 md:ml-64 min-h-screen pt-[calc(3.5rem+env(safe-area-inset-top,0px))] md:pt-0 pb-20 md:pb-0">
           {children}
         </main>
       </body>
